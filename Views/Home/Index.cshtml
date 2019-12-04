@@ -7,4 +7,12 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 <h1>Spa App here</h1>
-<div id="my-spa" asp-prerender-module="Views/Home/index-app"></div>
+<div id="my-spa" 
+asp-prerender-module="Views/Home/index-app"
+ asp-prerender-data="new {
+                    IsGoldUser = true,
+                    Cookies = ViewContext.HttpContext.Request.Cookies
+                 }"
+></div>
+
+

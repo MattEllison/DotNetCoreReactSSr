@@ -20,7 +20,7 @@
     "typescript": "^3.7.2"
   },
   "scripts": {
-    "Start": "tsc",
+    "start": "tsc",
     "build": "nodemon --watch 'Views/**/*.tsx' --exec 'tsc'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

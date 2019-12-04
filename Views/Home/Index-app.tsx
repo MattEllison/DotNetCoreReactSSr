@@ -2,14 +2,22 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 import { createServerRenderer } from "aspnet-prerendering";
 
-const HelloWorld = () => (
-  <div>no really Like For reals 'm a react app booooii</div>
-);
+const HelloWorld = props => {
+  console.log(props);
 
-let app = renderToString(<HelloWorld />);
+  return (
+    <div>
+      no really Like For reals 'm a react app booooii Is Gold User
+      {props.isGoldUser ? "IS" : "IS not"}
+    </div>
+  );
+};
 
 export default createServerRenderer(params => {
+  console.log("params ar", params.data);
   return new Promise((resolve, reject) => {
-    resolve({ html: app });
+    resolve({
+      html: renderToString(<HelloWorld isGoldUser={params.data.isGoldUser} />)
+    });
   });
 });
