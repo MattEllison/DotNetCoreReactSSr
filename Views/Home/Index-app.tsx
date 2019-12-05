@@ -7,7 +7,7 @@ const HelloWorld = props => {
 
   return (
     <div>
-      no really Like For reals 'm a react app booooii Is Gold User
+      what no really Like For reals 'm a react app booooii Is Gold User hello
       {props.isGoldUser ? "IS" : "IS not"}
     </div>
   );

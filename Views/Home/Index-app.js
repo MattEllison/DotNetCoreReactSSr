@@ -9,7 +9,7 @@ const aspnet_prerendering_1 = require("aspnet-prerendering");
 const HelloWorld = props => {
     console.log(props);
     return (react_1.default.createElement("div", null,
-        "no really Like For reals 'm a react app booooii Is Gold User",
+        "what no really Like For reals 'm a react app booooii Is Gold User hello",
         props.isGoldUser ? "IS" : "IS not"));
 };
 exports.default = aspnet_prerendering_1.createServerRenderer(params => {
