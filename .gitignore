@@ -2,3 +2,5 @@ node_modules
 .js
 bin
 obj
+Views/**/*.js
+Views/**/*.js.map
